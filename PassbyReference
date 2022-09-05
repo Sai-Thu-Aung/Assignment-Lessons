@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+void myFun(int* a,int* b);
+int main()
+{
+
+int firstData=10;
+int secondData=20;
+
+//printf("Enter first Value:");
+//scanf("%d",&firstData);
+
+//printf("Enter second Value:");
+//scanf("%d",&secondData);
+
+printf("Before Passing FirstData = %d, secondData = %d",firstData , secondData);
+
+ myFun(&firstData, &secondData);
+
+//printf("Return value : %d\n",returnValue);
+
+printf("\nAfter Passing FirstData = %d, secondData = %d",firstData , secondData);
+
+
+
+
+return 0;
+}
+
+void myFun(int* a,int* b){
+ int temp=*a;
+ *a = *b;
+ *b = temp;
+
+ //int c = a+b;
+}
