@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <conio.h> //console input output
+#define SIZE 6 // SYMBOLIC CONSTANT
+int arr[SIZE],number,i,position; // global scope
+int main(){
+
+printf_s("Enter number of elements:\n");
+scanf_s("%d",&number);
+
+printf_s("Enter %d elements of Array\n",number);
+for (i = 0; i < number; i++){
+    scanf_s("%d",&arr[i]);
+}
+printf_s("Array data elements are : \n");
+for (i = 0; i < number; i++){
+    printf_s(" %d ",arr[i]);
+}
+ printf_s("\n Enter the position of element you want to delete:");
+ scanf_s("%d",&position);
+ i = position + 1;
+
+ while (i <= number - 1){
+    arr[i - 1] =arr[i];
+    printf_s(" array place is %d",arr[i - 1]);
+    i++;
+ }
+ printf_s("After deleting array is:\n");
+ for (i = 0; i < number-1; i++){
+    printf_s(" %d ",arr[i]);
+
+ }
+ _getch();
+
+
+ return 0;
+}
