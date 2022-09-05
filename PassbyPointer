@@ -1,0 +1,21 @@
+#include <stdio.h>
+void dosomething(int* ptr);
+int main(){
+
+int data=10;
+int* ptr;
+
+ptr = &data;
+
+dosomething(ptr);
+
+printf(" Value of ptr %d",*ptr);
+
+
+return 0;
+}
+
+void dosomething(int* ptr){
+
+(*ptr)++;
+}
