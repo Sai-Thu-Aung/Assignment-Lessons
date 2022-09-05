@@ -1,0 +1,52 @@
+//Inserting array data
+
+#include<stdio.h>
+#include<conio.h>
+#define SIZE 6
+int arr[SIZE],element,number,i,position;
+int main(){
+
+printf_s("Enter number of elements:\n");
+scanf_s("%d",&number);
+printf_s("Enter %d elements of Array\n",number);
+
+for(i=0; i<number; i++){
+    scanf_s("%d",&arr[i]);
+}
+printf_s("Array data elements are : \n");
+
+for(i=0; i<number; i++){
+    printf_s(" %d",arr[i]);
+}
+printf_s("\nEnter the element to be insert: ");
+scanf_s("%d",&element);
+printf_s("\nEnter the postion of element:");
+scanf_s("%d",&position);
+
+// 10 20 30 40 50
+// 0   1  2  3  4
+
+//i=4, 10 20 30 40 50 50
+//i=3, 10 20 30 40 40 50
+//     10 20 30 25 40 50
+
+
+
+
+
+i = number - 1;
+while(position <= i){
+    arr[i + 1]=arr[i];
+    i--;
+}
+arr[position] = element;
+printf_s("After insertion array is :\n");
+
+for(i = 0; i < number; i++){
+    printf_s(" %d",arr[i]);
+}
+_getch();
+
+
+return 0;
+}
